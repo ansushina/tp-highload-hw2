@@ -1,8 +1,9 @@
 apt-get update
 apt-get install nginx
-sudo /etc/init.d/nginx start
+sudo nginx
 cp -f ./nginx.conf /etc/nginx/nginx.conf
-/etc/init.d/nginx restart
+cp -f ./default /etc/nginx/sites-available/default
+sudo nginx -s reload
 apt update
 apt install apt-transport-https ca-certificates curl software-properties-common
 apt install apt-transport-https ca-certificates curl software-properties-common
